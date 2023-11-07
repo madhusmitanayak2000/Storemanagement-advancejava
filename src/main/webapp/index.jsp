@@ -32,15 +32,15 @@ if (auth != null) {
 		<% 
 		if( !products.isEmpty()){
 			for(Product p:products){%>
-				<div class="col-md-3">
+				<div class="col-md-3 my-3">
 				<div class="card w-100" style="width: 18rem;">
-					<img src="product.images/hand-bag.jpg" class="card-img-top" alt="Card image cap ">
+					<img class="card-img-top"src="product.images/<%=p.getImage()%> " alt="Card image cap ">
 					<div class="card-body">	
 						<h5 class="card-title"><%=p.getName() %></h5>
-						<h6 class="price"> Price: $<%=p.getPrice()%></h6>
+						<h6 class="price"> Price: $<%=p.getPrice() %></h6>
 						<h6 class="category">Category :<%=p.getCategory() %></h6>
 				        <div class="mt-3 d-flex justify-content-between">
-				        	<a href="#" class="btn btn-primary">Add to cart </a>
+				        	<a href="add-to-cart?id=<%=p.getId() %>" class="btn btn-dark">Add to cart </a>
 				        	<a href="#" class="btn btn-primary">Buy Now</a>
 				        </div>
 					
